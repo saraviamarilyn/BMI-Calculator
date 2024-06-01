@@ -19,9 +19,20 @@ document.addEventListener('DOMContentLoaded', function(){
             //Muestro en pantalla
             document.getElementById('bmi-result').textContent = bmi.toFixed(1);
 
+            // Cambio el texto de la categoria
+            if(bmi < 18.5){
+                document.getElementById('bmi-category').textContent = 'Underweight';   
+            } else if(bmi >= 18.5 && bmi < 25){
+                document.getElementById('bmi-category').textContent = 'Normal weight';
+            }else if(bmi >= 25 && bmi < 30){
+                document.getElementById('bmi-category').textContent = 'Overweight';
+            }else{
+                document.getElementById('bmi-category').textContent = 'Obesity';
+            }
+
         }else{
             alert('Please enter valid height and weight.');
-            
+
         }
     });
 });
