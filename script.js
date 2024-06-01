@@ -15,6 +15,13 @@ document.addEventListener('DOMContentLoaded', function(){
 
             // Muestro el BMI en la consola
             console.log("BMI:", bmi.toFixed(1));
+
+            //Muestro en pantalla
+            document.getElementById('bmi-result').textContent = bmi.toFixed(1);
+
+        }else{
+            alert('Please enter valid height and weight.');
+            
         }
     });
 });
